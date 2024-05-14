@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonasiBersama</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .brand-title {
+            font-size: 1.5em;
+            color: #fff;
+        }
+
+        .navbar-links ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar-links li {
+            padding: 0 20px;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        .donate-btn {
+            background-color: #f0c14b;
+            color: #333;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        .toggle-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+        }
+
+        .toggle-button .bar {
+            height: 3px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-links {
+                display: none;
+                width: 100%;
+            }
+
+            .navbar-links ul {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .navbar-links ul li {
+                text-align: center;
+            }
+
+            .toggle-button {
+                display: flex;
+            }
+
+            .navbar-links.active {
+                display: flex;
+            }
+        }
+
+        .header {
+            background: url('https://source.unsplash.com/1600x900/?charity') no-repeat center center/cover;
+            height: 90vh;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 60px; 
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: #333;
+            background-color: #f0c14b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .section {
+            padding: 60px 20px;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about, .campaigns, .contact {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about p, .contact p {
+            margin-bottom: 20px;
+        }
+
+        .campaigns .campaign {
+            margin-bottom: 20px;
+        }
+
+        .campaign img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title">DonasiBersama</div>
+        <a href="javascript:void(0);" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                <li><a href="kampanye.html">Kampanye</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="donasi.html" class="donate-btn">Donasi Sekarang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header" id="home">
+        <div>
+            <h1>Selamat Datang di DonasiBersama</h1>
+            <p>Mari bergabung dan bantu mereka yang membutuhkan</p>
+            <a href="donasi.html">Donasi Sekarang</a>
+        </div>
+    </header>
+
+    <section class="section about" id="about">
+        <h2>Tentang Kami</h2>
+        <p>DonasiBersama adalah platform donasi yang bertujuan untuk membantu mereka yang membutuhkan. Kami percaya bahwa bersama, kita bisa membuat perubahan yang besar.</p>
+    </section>
+
+    <section class="section campaigns" id="campaigns">
+        <h2>Kampanye Unggulan</h2>
+        <div class="campaign">
+            <img src="https://source.unsplash.com/800x400/?help" alt="Campaign Image">
+            <h3>Kampanye 1</h3>
+            <p>Membantu anak-anak mendapatkan pendidikan yang layak.</p>
+        </div>
+        <div class="campaign">
+            <img src="https://source.unsplash.com/800x400/?charity" alt="Campaign Image">
+            <h3>Kampanye 2</h3>
+            <p>Menyediakan makanan dan tempat tinggal untuk tunawisma.</p>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <h2>Kontak Kami</h2>
+        <p>Jika Anda memiliki pertanyaan atau ingin berkontribusi lebih, jangan ragu untuk menghubungi kami.</p>
+        <p>Email: aldhisyaputra09@gmail.com</p>
+        <p>Telepon: +62 085 333 364 463</p>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.querySelector('.toggle-button');
+            const navbarLinks = document.querySelector('.navbar-links');
+
+            toggleButton.addEventListener('click', () => {
+                navbarLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
